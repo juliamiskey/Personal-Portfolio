@@ -16,7 +16,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('./dev/scripts/main.js')
+    return gulp.src('./dev/scripts/script.js')
         .pipe(babel({
             presets: ['env']
         }))
@@ -41,5 +41,5 @@ gulp.task('browser-sync', () => {
 gulp.task('default', ['browser-sync', 'scripts', 'styles'], () => {
     gulp.watch('dev/**/*.js', ['scripts']);
     gulp.watch('dev/**/*.scss', ['styles']);
-    gulp.watch('./public/styles/style.css', reload);
+    gulp.watch('./public/styles/styles.css', reload);
 });

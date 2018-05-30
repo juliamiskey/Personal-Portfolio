@@ -1,7 +1,7 @@
 {
-  "name": "chelsea_keeley_portfolio",
+  "name": "Gulp Boilerplate",
   "version": "1.0.0",
-  "description": "Chelsea Keeley Portfolio Site",
+  "description": "Julia Miskey's Gulp Boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
