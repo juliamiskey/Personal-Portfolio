@@ -1,6 +1,195 @@
 @import 'partials/setup';
 @import 'partials/typography';
 
+
+/* GENERAL STYLES  */
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+}
+
 body {
-    background: red;
+    font-family: $primary;
+    font-size: 1.6rem;
+    line-height: 25px;
+    font-weight: 400;
+    background: linear-gradient(to right,white 50%, yellow 50%);
+}
+
+.container {
+    width: 80%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+
+/* LINK STYLES */
+a {
+    text-decoration: none;
+}
+
+zoom a:hover {
+    cursor: url("../images/zoom.png") 40 40, crosshair;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* MOBILE NAV STYLES */
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-name__name {
+    /* display: none; */
+
+}
+
+#hamburger {
+    display:none;
+}
+
+.hamburger-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    cursor: pointer;
+} 
+
+.mobile-nav__menu {
+    /* display: none; */
+}
+
+.mobile-menu__item {
+
+}
+
+/* SOCIAL NAV SIDEBAR */
+.social-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 56px 40px;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.social-nav__name {
+    transform: rotate(-90deg); 
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 60vh;
+}
+
+.social-nav__name a {
+    color: black; 
+}
+
+.social-nav__socials ul li {
+    margin-top: 10px;
+}
+
+.social-nav__socials ul li a {
+    color: black;
+}
+
+.social-nav__socials ul li a:hover {
+    color: yellow;
+}
+
+
+/* MAIN NAV */
+
+.main-nav {
+    padding: 25px 0;
+}
+
+.main-nav ul li {
+   display: inline;
+    padding: 3%;
+}
+
+.main-nav ul li a {
+    color: black;
+}
+
+
+/* PORTFOLIO GRID LAYOUT */
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    grid-gap: 1em;
+}
+
+.portfolio-item {
+    overflow: hidden;
+}
+
+img.project-item {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.project-item__overlay {
+    background: $yellow;
+    opacity: 0.7;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    transition: 0.2s;
+    transform: translateY(100%);
+    z-index: 2;
+    h3 {
+
+    }
+    p {
+
+    }
+    
+}
+
+.project-item__overlay .close {
+
+}
+
+.project-link {
+    border: 2px solid $white;
+    color: $white;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+}
+
+.project-git {
+    border: 2px solid $white;
+    color: $white;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+}
+
+/* FOOTER STYLES */
+footer {
+    background: linear-gradient(to right,grey 50%, white 50%);
+    height: 200px;
 }
