@@ -15,33 +15,61 @@ body {
     font-size: 1.6rem;
     line-height: 25px;
     font-weight: 400;
-    background: linear-gradient(to right,white 50%, yellow 50%);
+    background: $white;
 }
 
+section {
+    padding: 3em 0;
+}
 .container {
     width: 80%;
     max-width: 1720px;
     margin: 0 auto;
 }
 
-p {
-    margin: 0 0 20px 0;
-}
-
-
 /* LINK STYLES */
 a {
     text-decoration: none;
-}
-
-zoom a:hover {
-    cursor: url("../images/zoom.png") 40 40, crosshair;
+    transition: all .4s ease-in;
+    &:hover {
+        background: $yellow;        
+    }
 }
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.btn {
+   background: $black;
+    color: $white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    color: $black;
+}
+
+// HEADER STYLES
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 3em;
+}
+
+// BACKGROUND STYLES
+.yellow-bkgrd {
+    background: $yellow;
 }
 
 /* MOBILE NAV STYLES */
@@ -52,11 +80,10 @@ ul {
 
 .mobile-name__name {
     /* display: none; */
-
 }
 
 #hamburger {
-    display:none;
+    display: none;
 }
 
 .hamburger-icon {
@@ -68,19 +95,19 @@ ul {
 } 
 
 .mobile-nav__menu {
-    /* display: none; */
+     display: none; 
 }
 
-.mobile-menu__item {
+// .mobile-menu__item {
 
-}
+// }
 
 /* SOCIAL NAV SIDEBAR */
 .social-nav {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 56px 40px;
+    padding: 4em 1em;
     height: 100%;
     text-align: center;
     z-index: 2;
@@ -92,6 +119,7 @@ ul {
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 60vh;
+    background: $yellow;
 }
 
 .social-nav__name a {
@@ -100,96 +128,225 @@ ul {
 
 .social-nav__socials ul li {
     margin-top: 10px;
+    a {
+        color: black;   
+    }
 }
-
-.social-nav__socials ul li a {
-    color: black;
-}
-
-.social-nav__socials ul li a:hover {
-    color: yellow;
-}
-
 
 /* MAIN NAV */
 
 .main-nav {
     padding: 25px 0;
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        li {
+            display: inline-block;
+            padding: 3%;
+            a {
+               color: black; 
+            }
+        }
+    }
 }
 
-.main-nav ul li {
-   display: inline;
-    padding: 3%;
+
+
+// .main-nav ul li {
+//     display: inline-block;
+//     padding: 3%;
+// }
+
+// .main-nav ul li a {
+//     color: black;
+// }
+
+// HERO SECTION
+// .hero {
+//     height: 100vh;
+// }
+
+.hero h1 span {
+    display: block;
+    line-height: 150%;
 }
 
-.main-nav ul li a {
-    color: black;
+.hero .scroll-down {
+    display: block;
+    text-align: center;
 }
-
-
 /* PORTFOLIO GRID LAYOUT */
 
 .portfolio-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
     grid-gap: 1em;
 }
 
 .portfolio-item {
-    overflow: hidden;
+  position: relative;
 }
 
-img.project-item {
-    max-width: 100%;
-    object-fit: cover;
+// .portfolio-item-1 {
+//     grid-area: 1/1/2/1;
+// }
+
+// .portfolio-item-2 {
+//     grid-area: 1/2/1/2;
+// }
+
+// .portfolio-item-3 {
+//     grid-area: 1/3/2/3; 
+// }
+
+// .portfolio-item-4 {
+//     grid-area: 3/1/3/1;
+// }
+
+// .portfolio-item-5 {
+//     grid-area: 2/2/3/2;
+// }
+
+// .portfolio-item-6 {
+//     grid-area: 3/3/3/3;
+// }
+
+
+.project-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .project-item__overlay {
-    background: $yellow;
-    opacity: 0.7;
-    position: relative;
+    position: absolute;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    transition: 0.2s;
-    transform: translateY(100%);
-    z-index: 2;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $yellow;
+    cursor: url("./assets/zoomeye.png") 40 40, crosshair;
+    transition: all .4s ease-in;
+}
+
+.portfolio-item:hover .project-item__overlay {
+    opacity: 0.9;
+}
+
+.project-item__overlay-text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     h3 {
-
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid $black;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+       
     }
-    p {
-
+    a:hover {
+        border: 1px solid $black;
+        color: $black;
     }
-    
 }
 
-.project-item__overlay .close {
-
-}
-
-.project-link {
-    border: 2px solid $white;
-    color: $white;
+/*QUOTE SECTION*/
+.quote {
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    i {
+        color: $black;
+    }
 }
 
-.project-git {
-    border: 2px solid $white;
-    color: $white;
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px;
+.quote q {
+  text-align: center;
+  display: inline-block;
 }
+
+.quote p {
+  margin: 20px;
+  text-align: right;
+}
+
+/*SKILLS AND TOOLS STYLES*/
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px;
+}
+
+.skills-item__icon {
+  text-align: center;
+  font-size: 6rem;
+  display: block; 
+  flex: 0 0 16.6%;
+  height: 60px;
+  width: 60px;
+}
+
+/*CONTACT STYLES*/
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    width: 80%;
+    padding: 30px;
+    margin: 50px auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="url"],
+.contact-form textarea,
+.contact-form select {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid $black;
+    background: transparent;
+    margin-bottom: 40px;
+    height: 45px;
+    color: $black;
+}
+
+.contact-form input[type="button"] {
+  border: none;
+}
+
 
 /* FOOTER STYLES */
 footer {
-    background: linear-gradient(to right,grey 50%, white 50%);
-    height: 200px;
+    position: relative;
+    bottom: 0;
+    padding: 0;
+    background: transparent;
+    width: 100%;
 }
+
+.footer {
+    border-top: 1px solid $black;
+    p {
+        text-align: center;
+    }
+}
+
+

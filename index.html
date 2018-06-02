@@ -3,7 +3,7 @@
 
 <head>
     <!-- FAVICON -->
-    <link type="assets/logo.png" rel="icon" href="#">
+    <link type="public/styles/assets/logo.png" rel="icon" href="#">
     
     <!-- METATAGS -->
     <meta charset="UTF-8">
@@ -16,10 +16,14 @@
     
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-s
     
     <!-- FONTAWESOME ICONS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <!-- DEVICON SCRIPT -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+
 </head>
 
 <!-- INDEX GOES HERE -->
@@ -106,10 +110,13 @@ s
                 </li>
             </ul>
         </div>
+     
+<!-- RETURN TO TOP BUTTON -->
+        <a href="#header" onclick="topFunction()"><i class="fas fa-chevron-up" id="top"></i></a>
 </div>
 
 <!-- HEADER -->
-<header>
+<header id="header">
     <div class="container">
 
         <nav class="main-nav">
@@ -127,8 +134,8 @@ s
                 </li>
             
                 <li class="main-nav__item">
-                    <a href="#portfolio" class="main-nav__item__link">
-                        Portfolio
+                    <a href="#work" class="main-nav__item__link">
+                       Work
                     </a>
                 </li>
             
@@ -143,48 +150,188 @@ s
 </header>
 
 <main>
-<!-- PORTFOLIO GALLERY SECTION-->
-    <section>
-        <div class="container portfolio-gallery">
+<!-- HERO IMAGE -->
+<section>
+    <div class="container hero">
+        <h1>
+            <span>Hello! My name is Julia Miskey. </span>
+            <span>I am a Front-End Developer &amp; </span>
+            <span>Web Designer based in </span>
+            <span>Toronto, Canada.</span>
+        </h1>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>    
+</section>
 
-            <div class="portfolio-item">
-                <img src="dev/styles/assets/" alt="#" class="project-item">
+<!-- PORTFOLIO GALLERY SECTION-->
+<section id="work">
+    <div class="container">
+        <h2>Featured Works</h2>
+        <div class="portfolio-gallery">
+
+<!-- PROJECT 1-->
+            <div class="portfolio-item portfolio-item-1">
+                <img src="public/styles/assets/sigmaProject.jpeg" alt="#" class="project-item">
                 <div class="project-item__overlay">
-                    <i class="close fas fa-times"></i>
-                    <h3></h3>
-                    <p></p>
-                    <a href="#" class="project-link">View Live</a>
-                    <a href="#" class="project-git">View on GitHub</a>
+                    <div class="project-item__overlay-text">
+                        <h3>Project Title</h3>
+                        <p>Project description</p>
+                        <a href="#" class="project-link btn">View</a>
+                    </div>
                 </div>
             </div>
 
+<!-- PROJECT 2 -->
+            <div class="portfolio-item portfolio-item-2">
+                <img src="public/styles/assets/fortune-cookie-project.jpeg" alt="#" class="project-item">
+                <div class="project-item__overlay">
+                    <div class="project-item__overlay-text">
+                        <h3>Project Title</h3>
+                        <p>Project description</p>
+                        <a href="#" class="project-link btn">View</a>
+                    </div>
+                </div>
+            </div>
+
+<!-- PROJECT 3 -->
+            <div class="portfolio-item portfolio-item-3">
+                <img src="public/styles/assets/whatson-project.jpeg" alt="#" class="project-item">
+                <div class="project-item__overlay">
+                    <div class="project-item__overlay-text">
+                        <h3>Project Title</h3>
+                        <p>Project description</p>
+                        <a href="#" class="project-link btn">View</a>
+                    </div>
+                </div>
+            </div>
+
+<!-- PROJECT 4-->
+        <div class="portfolio-item portfolio-item-4">
+            <img src="public/styles/assets/job-search-project.jpeg" alt="#" class="project-item">
+            <div class="project-item__overlay">
+                <div class="project-item__overlay-text">
+                    <h3>Project Title</h3>
+                    <p>Project description</p>
+                    <a href="#" class="project-link btn">View</a>
+                </div>
+            </div>
         </div>
-    </section>   
+</section>   
 
 <!-- QUOTE SECTION -->
     <section>
-        <div class="container">
-
+        <div class=" container">
+            <div class="quote">
+                <i class="fa fa-quote-left fa-2x fa-pull-left" aria-hidden="true"></i>
+                <q>Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated.</q>
+                <i class="fa fa-quote-right fa-2x fa-pull-right" aria-hidden="true"></i>
+                <p>- Paul Rand</p>
+            </div>
         </div>
     </section>
+
+<!-- ABOUT ME SECTION -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p> I am the girl with the mind that never sleeps. Ever since I can remember, I’ve been coming up with ideas and projects or goals to tackle. I find a lot of satisfaction in setting a goal and seeing it through until the end. It’s
+        how I learn and grow as a person. I am a front-end web developer with a background in events and marketing. In
+        my work, I always strive to make complexity feel simple. I am focused on creating clean, well-structured and
+        user friendly websites for businesses and individuals who are looking to build their online presence.</p>
+        <p>When I'm not coding, I enjoy eating spicy food, gardening, and playing sudoku</p>
+        <p><i class="fas fa-arrow-right"></i>Read Full Bio</p>
+    </div>
+</section>
 
 <!-- SKILLS AND CV SECTION -->
     <section>
         <div class="container">
+            <h2>Skills and Tools</h2>
+ 
+            <div class="skills">
+                <div class="skills-item">
+                    <i class="devicon-html5-plain skills-item__icon"></i>
+                    <p>HTML5</p>
+                </div>
+    
+                <div class="skills-item">
+                    <i class="devicon-css3-plain skills-item__icon"></i>
+                    <p>CSS3</p>
+                </div>
+    
+                <div class="skills-item">
+                    <i class="devicon-javascript-plain skills-item__icon"></i>
+                    <p>Javascript</p>
+                </div>
+    
+                <div class="skills-item">
+                    <i class="devicon-jquery-plain skills-item__icon"></i>
+                    <p>jQuery</p>
+                </div>
+    
+                <div class="skills-item">
+                    <i class="devicon-github-plain skills-item__icon"></i>
+                    <p>GitHub</p>
+                </div>
+    
+                <div class="skills-item">
+                    <i class="devicon-sass-original skills-item__icon"></i>
+                    <p>SASS</p>
+                </div>
 
+                <div class="skills-item">
+                    <i class="devicon-gulp-plain skills-item__icon"></i>
+                    <p>Gulp</p>
+                </div>
+
+                <div class="skills-item">
+                    <i class="devicon-react-original skills-item__icon"></i>
+                    <p>React</p>
+                </div>
+
+                <div class="skills-item">
+                    <img src="public/styles/assets/npm.svg" class="skills-item__icon">
+                    <p>NPM</p>
+                </div>
+
+                <div class="skills-item">
+                    <img src="public/styles/assets/firebase.svg" class="skills-item__icon">
+                    <p>Firebase</p>
+                </div>      
+
+            </div>
+    
+            <div class="download-cv">
+                <a href="https://www.dropbox.com/s/2d9nv8yiha23bvg/Julia%20Miskey%20CV.pdf?dl=0" target="_blank" class="btn">Download CV</a>
+            </div>
+        
         </div>
     </section>
 
 <!-- CONTACT ME SECTION -->
-    <section>
-        <div class="container">
-    
-        </div>
-    </section
+<section id="contact" class="yellow-bkgrd">
+    <div class="container contact">
+        <h2>Let's Work Together</h2>
+        <p>Have a project in mind? I'd love to hear from you! Feel free to use the form below or email me directly at hello@juliamiskey.com and I will get back to you shortly.</p>
+
+        <form class="contact-form" action="mailto:hello@juliamiskey.com">
+            <input type="text" name="field1" placeholder="Full Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="url" name="url" placeholder="Website" />
+            <textarea placeholder="Message" cols="40" rows="5"></textarea>
+            <input type="button" class="btn" value="Send Message" />
+        </form>
+
+    </div>
+</section>
 </main>
 
 <footer>
-
+    <div class="container footer">
+        <p>&copy; Copyright 2018 Julia Miskey</p>
+    </div>
 </footer>
 
 <!-- jQUERY  -->
