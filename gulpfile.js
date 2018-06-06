@@ -26,9 +26,12 @@ gulp.task('scripts', () => {
 
 gulp.task('browser-sync', () => {
     browserSync.init({
-        server: './'
+        server: './',
+        index: 'index.html',
+        project: 'project.html'
     })
 });
+
 
 // gulp.task('watch', function () {
 //     gulp.watch('./dev/scripts/*.js', ['scripts']);

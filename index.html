@@ -3,7 +3,7 @@
 
 <head>
     <!-- FAVICON -->
-    <link type="public/styles/assets/logo.png" rel="icon" href="#">
+    <link href="public/styles/assets/JuliaLogo.png" rel="icon">
     
     <!-- METATAGS -->
     <meta charset="UTF-8">
@@ -23,59 +23,43 @@
     <!-- DEVICON SCRIPT -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-
 </head>
 
 <!-- INDEX GOES HERE -->
-<!-- 1. MOBILE MENU -->
-<!-- 2. SOCIAL NAV SIDEBAR -->
+<!-- 1. skip-links 
+2. social nav side bar 
+3. return to top button
+4. main-nav
+5. portfolio gallery
+6. quote
+7. about me
+8. skills and tools
+9. download resume
+10. contact me
+11. footer -->
 
 <body>
-<!-- MOBILE NAV -->
-
-<!-- <div class="mobile-nav">
-    <div class="mobile-nav__name">
-        <a href="index.html">
-            <p>JULIA</p>
-        </a>
-    </div>
-    
-    <div class="mobile-nav__menu">
-        <input type="checkbox" id="hamburger" />
-        <label class="hamburger-icon" for="hamburger">
-            <span></span>
-        </label>
-        <ul class="mobile-menu">
-            <li class="mobile-menu__item">
-                <a href="#home" class="mobile-menu__item__link">
-                    Home
-                </a>
-            </li>
-
-            <li class="mobile-menu__item">
-                <a href="#about" class="mobile-menu__item__link">
-                    About
-                </a>
-            </li>
-
-            <li class="mobile-menu__item">
-                <a href="#portfolio" class="mobile-menu__item__link">
-                    Portfolio
-                </a>
-            </li>
-
-            <li class="mobile-menu__item">
-                <a href="#contact" class="mobile-menu__item__link">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </div>
-</div> -->
-        
-
+<!-- SKIP LINKS -->
+<ul class="skip-links">
+    <li>
+        <a href="#nav">Skip to Navigation</a>
+    </li>
+    <li>
+        <a href="#main">Skip to Main Content</a>
+    </li>
+    <li>
+        <a href="#work">Skip to Work Section</a>
+    </li>
+    <li>
+        <a href="#about">Skip to About Me Section</a>
+    </li>
+    <li>
+        <a href="#contact">Skip to Contact Section</a>
+    </li>
+</ul>
+  
 <!-- SOCIAL NAV SIDE BAR -->
-    <div class="social-nav">
+    <div class="social-nav" id="nav">
 
         <div class="social-nav__name">
             <a href="index.html">
@@ -104,6 +88,18 @@
                 </li>
 
                 <li>
+                    <a href="https://codepen.io/juliamiskey/#" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://medium.com/@juliamiskey" target="_blank">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                </li>
+
+                <li>
                     <a href="mailto:juliamiskey@gmail.com" target="_blank">
                         <i class="fas fa-envelope"></i>
                     </a>
@@ -118,8 +114,7 @@
 <!-- HEADER -->
 <header id="header">
     <div class="container">
-
-        <nav class="main-nav">
+        <nav class="main-nav" role="navigation">
             <ul>
                 <li class="main-nav__item">
                     <a href="#home" class="main-nav__item__link">
@@ -149,18 +144,18 @@
     </div>
 </header>
 
-<main>
+<main id="main">
 <!-- HERO IMAGE -->
 <section>
     <div class="container hero">
         <h1>
-            <span>Hello! My name is Julia Miskey. </span>
-            <span>I am a Front-End Developer &amp; </span>
-            <span>Web Designer based in </span>
-            <span>Toronto, Canada.</span>
+            <span class="hero-md">Hello! My name is </span>
+            <span class="hero-lrg">Julia Miskey.</span>
+            <span class="hero-sm">Front-End Developer based in Toronto, Canada </span>
         </h1>
+
         <div class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
+            <a href="#work"><i class="fas fa-chevron-down fa-4x"></i></a>
         </div>
     </div>    
 </section>
@@ -173,56 +168,96 @@
 
 <!-- PROJECT 1-->
             <div class="portfolio-item portfolio-item-1">
-                <img src="public/styles/assets/sigmaProject.jpeg" alt="#" class="project-item">
+                <div class="mobile-only-title">
+                    <h3>Simpleflex</h3>
+                    <p>PSD Conversion</p>
+                </div>
+                <img src="public/styles/assets/simpleflex-project.jpeg" alt="" class="project-item">
                 <div class="project-item__overlay">
                     <div class="project-item__overlay-text">
-                        <h3>Project Title</h3>
-                        <p>Project description</p>
-                        <a href="#" class="project-link btn">View</a>
+                        <h3>Simpleflex</h3>
+                        <p>PSD Conversion</p>
+                        <a href="simpleflex-casestudy.html" class="btn">Case Study</a>
+                        <a href="http://www.juliamiskey.com/simpleflex" class="project-link btn" target="_blank">View Live</a>
                     </div>
+                </div>
+                <div class="mobile-only-btns">
+                    <a href="simpleflex-casestudy.html" class="btn">Case Study</a>
+                    <a href="http://www.juliamiskey.com/simpleflex" class="project-link btn" target="_blank">View Live</a>
+                    <a href="https://github.com/juliamiskey/Simpleflex" class="github-link btn" target="_blank">View on GitHub</a>
                 </div>
             </div>
 
 <!-- PROJECT 2 -->
             <div class="portfolio-item portfolio-item-2">
+                <div class="mobile-only-title">
+                    <h3>Fortune Cookie</h3>
+                    <p>React and AXIOS API</p>
+                </div>
                 <img src="public/styles/assets/fortune-cookie-project.jpeg" alt="#" class="project-item">
                 <div class="project-item__overlay">
                     <div class="project-item__overlay-text">
-                        <h3>Project Title</h3>
-                        <p>Project description</p>
-                        <a href="#" class="project-link btn">View</a>
+                        <h3>Fortune Cookie</h3>
+                        <p>React and AXIOS API</p>
+                        <a href="fortune-casestudy.html" class="btn">Case Study</a>
+                        <a href="http:www.juliamiskey.com/FortuneCookieApp" class="project-link btn" target="_blank">View Live</a>
                     </div>
+                </div>
+                <div class="mobile-only-btns">
+                    <a href="fortune-casestudy.html" class="btn">Case Study</a>
+                    <a href="http://www.juliamiskey.com/fortuneCookieApp" class="project-link btn" target="_blank">View Live</a>
+                    <a href="https://github.com/juliamiskey/Fortune-Cookie-React" class="github-link btn" target="_blank">View on GitHub</a>
                 </div>
             </div>
 
-<!-- PROJECT 3 -->
-            <div class="portfolio-item portfolio-item-3">
-                <img src="public/styles/assets/whatson-project.jpeg" alt="#" class="project-item">
+<!-- PROJECT 3-->
+            <div class="portfolio-item portfolio-item-4">
+                <div class="mobile-only-title">
+                    <h3>Job Hub</h3>
+                    <p>Client Project in React Router</p>
+                </div>
+                <img src="public/styles/assets/jobhub-projectsquare.jpeg" alt="#" class="project-item">
                 <div class="project-item__overlay">
                     <div class="project-item__overlay-text">
-                        <h3>Project Title</h3>
-                        <p>Project description</p>
-                        <a href="#" class="project-link btn">View</a>
+                        <h3>Job Hub</h3>
+                        <p>Client Project in ReactJS Router</p>
+                    <a href="jobhub-casestudy.html" class="btn">Case Study</a>
+                    <a href="http://www.juliamiskey.com/jobhub" class="project-link btn" target="_blank">View Live</a>
                     </div>
+                </div>
+                <div class="mobile-only-btns">
+                    <a href="jobhub-casestudy.html" class="btn">Case Study</a>
+                    <a href="https://job-search-13455.firebaseapp.com/" class="project-link btn" target="_blank">View Live</a>
+                    <a href="https://github.com/juliamiskey/marketingjobs_app_project6" class="github-link btn" target="_blank">View on GitHub</a>
                 </div>
             </div>
 
-<!-- PROJECT 4-->
-        <div class="portfolio-item portfolio-item-4">
-            <img src="public/styles/assets/job-search-project.jpeg" alt="#" class="project-item">
-            <div class="project-item__overlay">
-                <div class="project-item__overlay-text">
-                    <h3>Project Title</h3>
-                    <p>Project description</p>
-                    <a href="#" class="project-link btn">View</a>
+<!-- PROJECT 4 -->
+            <div class="portfolio-item portfolio-item-3">
+                <div class="mobile-only-title">
+                    <h3>What's On</h3>
+                    <p>Javascript and AJAX API</p>
+                </div>
+                <img src="public/styles/assets/whatson-projectsquare.jpeg" alt="#" class="project-item">
+                <div class="project-item__overlay">
+                    <div class="project-item__overlay-text">
+                        <h3>What's On</h3>
+                        <p>Javascript and AJAX API</p>
+                        <a href="whatson-casestudy.html" class="btn">Case Study</a>
+                        <a href="http://www.juliamiskey.com/whatson" class="project-link btn" target="_blank">View Live</a>
+                    </div>
+                </div>
+                <div class="mobile-only-btns">
+                    <a href="whatson-casestudy.html" class="btn">Case Study</a>
+                    <a href="http://www.juliamiskey.com/whatson" class="project-link btn" target="_blank">View Live</a>
+                    <a href="https://github.com/juliamiskey/WhatsOn" class="github-link btn" target="_blank">View on GitHub</a>
                 </div>
             </div>
-        </div>
 </section>   
 
 <!-- QUOTE SECTION -->
-    <section>
-        <div class=" container">
+    <section id="quote"> 
+        <div class="container">
             <div class="quote">
                 <i class="fa fa-quote-left fa-2x fa-pull-left" aria-hidden="true"></i>
                 <q>Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated.</q>
@@ -234,19 +269,18 @@
 
 <!-- ABOUT ME SECTION -->
 <section id="about">
-    <div class="container">
+    <div class="container about">
         <h2>About Me</h2>
         <p> I am the girl with the mind that never sleeps. Ever since I can remember, I’ve been coming up with ideas and projects or goals to tackle. I find a lot of satisfaction in setting a goal and seeing it through until the end. It’s
         how I learn and grow as a person. I am a front-end web developer with a background in events and marketing. In
         my work, I always strive to make complexity feel simple. I am focused on creating clean, well-structured and
         user friendly websites for businesses and individuals who are looking to build their online presence.</p>
-        <p>When I'm not coding, I enjoy eating spicy food, gardening, and playing sudoku</p>
-        <p><i class="fas fa-arrow-right"></i>Read Full Bio</p>
+        <p>When I'm not coding, I enjoy designing and sewing clothes, gardening, and challenging myself with sudoku. </p>
     </div>
 </section>
 
 <!-- SKILLS AND CV SECTION -->
-    <section>
+    <section class="skills-tools">
         <div class="container">
             <h2>Skills and Tools</h2>
  
@@ -263,7 +297,7 @@
     
                 <div class="skills-item">
                     <i class="devicon-javascript-plain skills-item__icon"></i>
-                    <p>Javascript</p>
+                    <p>JavaScript</p>
                 </div>
     
                 <div class="skills-item">
@@ -288,7 +322,7 @@
 
                 <div class="skills-item">
                     <i class="devicon-react-original skills-item__icon"></i>
-                    <p>React</p>
+                    <p>ReactJS</p>
                 </div>
 
                 <div class="skills-item">
@@ -304,7 +338,7 @@
             </div>
     
             <div class="download-cv">
-                <a href="https://www.dropbox.com/s/2d9nv8yiha23bvg/Julia%20Miskey%20CV.pdf?dl=0" target="_blank" class="btn">Download CV</a>
+                <a href="https://www.dropbox.com/s/b532xp0qoh5lsho/JULIA%20MISKEY%20RESUME.pdf?dl=0" target="_blank" class="btn cv">Download Resume</a>
             </div>
         
         </div>
@@ -314,23 +348,23 @@
 <section id="contact" class="yellow-bkgrd">
     <div class="container contact">
         <h2>Let's Work Together</h2>
-        <p>Have a project in mind? I'd love to hear from you! Feel free to use the form below or email me directly at hello@juliamiskey.com and I will get back to you shortly.</p>
+        <p>Have a project in mind? Hiring? I'd love to hear from you! <br>Feel free to use the form below or email me directly at <a href="mailto:hello@juliamiskey.com">hello@juliamiskey.com</a> and I will get back to you shortly.</p>
 
-        <form class="contact-form" action="mailto:hello@juliamiskey.com">
-            <input type="text" name="field1" placeholder="Full Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <input type="url" name="url" placeholder="Website" />
-            <textarea placeholder="Message" cols="40" rows="5"></textarea>
-            <input type="button" class="btn" value="Send Message" />
+        <form class="contact-form" action="https://formspree.io/hello@juliamiskey.com" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required/>
+            <input type="email" name="_replyto" placeholder="Your e-mail address" required/>
+            <input type="text" name="subject" placeholder="Subject" required/>
+            <textarea name="message" placeholder="Message" cols="40" rows="5" required></textarea>
+            <input type="submit" class="btn" value="Send">
         </form>
 
     </div>
 </section>
 </main>
 
-<footer>
-    <div class="container footer">
-        <p>&copy; Copyright 2018 Julia Miskey</p>
+<footer class="yellow-bkgrd">
+    <div class="container footer-socials">
+        <p>&copy; Copyright 2018 Julia Miskey</p> 
     </div>
 </footer>
 
