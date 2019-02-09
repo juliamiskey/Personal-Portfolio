@@ -34,13 +34,13 @@ a {
     text-decoration: none;
     transition: all .4s ease-in;
     &:hover {
-        background-image: linear-gradient(#fff 50%, $yellow 50%);       
+        background-image: linear-gradient( #fff 0, #fff 40%, #fde231 40%, #fde231 66%, #fff 66%, #fff 100%);       
     }
     &:focus {
         outline: 1px solid $yellow;  
     }
     &:active {
-        background-image: linear-gradient(#fff 50%, $yellow 50%);
+        background-image: linear-gradient( #fff 0, #fff 40%, #fde231 40%, #fde231 66%, #fff 66%, #fff 100%);       
     }
 }
 
@@ -78,7 +78,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 4px;
     display: inline-block;
-    background-image: linear-gradient(#fff 50%, $yellow 50%);
+    background-image: linear-gradient( #fff 0, #fff 40%, #fde231 40%, #fde231 66%, #fff 66%, #fff 100%);       
 }
 
 h3 {
@@ -126,7 +126,7 @@ h3 {
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 45vh;
-    background-image: linear-gradient(#fff 50%, $yellow 50%);
+    background-image: linear-gradient( #fff 0, #fff 40%, #fde231 40%, #fde231 66%, #fff 66%, #fff 100%);       
 }
 
 .social-nav__name a {
@@ -171,7 +171,7 @@ h3 {
 .hero h1 .hero-lrg {
     display: inline-block;
     font-size: 9vw;
-    background-image: linear-gradient(#fff 50%, $yellow 50%);
+    background-image: linear-gradient( #fff 0, #fff 40%, #fde231 40%, #fde231 66%, #fff 66%, #fff 100%);       
     margin-bottom: .5em;
 }
 
@@ -311,6 +311,9 @@ h3 {
 
 .skills-item {
     margin: 0 1em;
+    p {
+        text-align: center;
+    }
 }
 
 .skills-item__icon {
@@ -319,6 +322,7 @@ h3 {
   font-size: 6rem;
   height: 60px;
   width: 60px;
+  margin: 0 auto;
 }
 
 .cv {
